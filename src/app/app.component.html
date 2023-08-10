@@ -8,7 +8,14 @@
 
 <br>
 <p *ngIf="registrado">{{mensaje}} </p>
-<div style="border: solid blue;padding: 10px;" *ngIf="registrado">
+<div style="border: solid blue;padding: 10px;" *ngIf="registrado ; else sinRegistrar">
   <br>Nombre: {{nombre}} 
   <br>Apellido: {{apellido}}
 </div>
+<ng-template #sinRegistrar>
+  <p>Nadie Registrado</p>
+</ng-template>
+<br><br>
+<ul>
+  <li *ngFor="let data of entradas ; let i=index">Entrada..{{i}}  {{data.title}}</li>
+</ul>
