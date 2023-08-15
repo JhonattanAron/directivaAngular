@@ -17,6 +17,7 @@ export class AppComponent {
   protected nombre:string = "";
   protected apellido:string = "";
   protected entradas:Entrada[];
+  protected cargo:string = "";
 
   constructor(){
     this.entradas = [
